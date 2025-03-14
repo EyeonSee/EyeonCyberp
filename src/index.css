@@ -4,14 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styles */
+/* 🌙 Dark Mode Background */
 body {
   background: linear-gradient(135deg, #0D1117, #161B22);
   color: white;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-/* Subtle Box Shadow Effect */
+/* 🎭 Glassmorphism Effect */
 .glassmorphism {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
@@ -20,14 +21,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Smooth Hover Animations */
-.hover-scale {
-  transition: all 0.3s ease-in-out;
-}
-.hover-scale:hover {
-  transform: scale(1.05);
-}
-
+/* 🌟 Navbar Links */
 .nav-link {
   font-size: 1.1rem;
   font-weight: 600;
@@ -44,10 +38,24 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Mobile Navbar */
-@media (max-width: 768px) {
-  .nav-link {
-    display: block;
-    padding: 12px;
-  }
+/* 💡 Smooth Hover Animations */
+.hover-scale {
+  transition: all 0.3s ease-in-out;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* 📜 Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 📌 Footer Styling */
+.footer-links a {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.footer-links a:hover {
+  color: #38bdf8;
 }
