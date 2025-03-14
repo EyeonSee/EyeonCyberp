@@ -19,18 +19,31 @@ const Navbar = () => {
 
         {/* 🌟 Navbar Links */}
         <ul
-          className={`md:flex md:space-x-8 absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-[#0D1117] md:bg-transparent text-center md:text-left p-6 md:p-0 transition-all duration-300 ${
-            isOpen ? "block shadow-lg rounded-lg" : "hidden md:flex"
+          className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-[#0D1117] md:bg-transparent text-center md:text-left p-6 md:p-0 transition-all duration-300 ${
+            isOpen ? "block" : "hidden md:flex"
           }`}
-          onClick={() => setIsOpen(false)} // ✅ Close menu when clicking a link
         >
-          <li className="py-2 md:py-0"><a href="#home" className="nav-link">Home</a></li>
-          <li className="py-2 md:py-0"><a href="#resume" className="nav-link">Resume</a></li>
-          <li className="py-2 md:py-0"><a href="#skills" className="nav-link">Skills</a></li>
-          <li className="py-2 md:py-0"><a href="#certifications" className="nav-link">Certifications</a></li>
-          <li className="py-2 md:py-0"><a href="#projects" className="nav-link">Projects</a></li>
-          <li className="py-2 md:py-0"><a href="#testimonials" className="nav-link">Testimonials</a></li>
-          <li className="py-2 md:py-0"><a href="#contact" className="nav-link">Contact</a></li>
+          <li className="py-2 md:py-0">
+            <a href="#home" className="nav-link" onClick={() => setIsOpen(false)}>Home</a>
+          </li>
+          <li className="py-2 md:py-0">
+            <a href="#resume" className="nav-link" onClick={() => setIsOpen(false)}>Resume</a>
+          </li>
+          <li className="py-2 md:py-0">
+            <a href="#skills" className="nav-link" onClick={() => setIsOpen(false)}>Skills</a>
+          </li>
+          <li className="py-2 md:py-0">
+            <a href="#certifications" className="nav-link" onClick={() => setIsOpen(false)}>Certifications</a>
+          </li>
+          <li className="py-2 md:py-0">
+            <a href="#projects" className="nav-link" onClick={() => setIsOpen(false)}>Projects</a>
+          </li>
+          <li className="py-2 md:py-0">
+            <a href="#testimonials" className="nav-link" onClick={() => setIsOpen(false)}>Testimonials</a>
+          </li>
+          <li className="py-2 md:py-0">
+            <a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}>Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
