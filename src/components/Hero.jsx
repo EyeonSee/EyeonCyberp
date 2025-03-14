@@ -7,9 +7,6 @@ const Hero = () => {
       <p className="text-lg mt-6 max-w-2xl text-gray-300 relative">
         Securing digital environments with <span className="text-green-400">ethical hacking</span> and <span className="text-yellow-400">penetration testing.</span>
       </p>
-      <a href="/resume.pdf" className="mt-8 px-8 py-3 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition hover-scale relative">
-        Download Resume
-      </a>
     </section>
   );
 };
