@@ -1,14 +1,17 @@
 const Hero = () => {
-    return (
-      <section id="home" className="h-screen flex flex-col justify-center items-center text-center bg-gray-800 text-white">
-        <h1 className="text-5xl font-bold">Cybersecurity & IT Professional</h1>
-        <p className="text-lg mt-4">Specializing in network security, penetration testing, and cloud computing.</p>
-        <a href="/resume.pdf" className="mt-6 bg-blue-500 px-6 py-3 rounded-full text-white hover:bg-blue-600">
-          Download Resume
-        </a>
-      </section>
-    );
-  };
-  
-  export default Hero;
-  
+  return (
+    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative px-6">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-gray-900 opacity-30"></div>
+
+      <h1 className="text-5xl md:text-6xl font-extrabold text-blue-400 relative">Cybersecurity & IT Expert</h1>
+      <p className="text-lg mt-6 max-w-2xl text-gray-300 relative">
+        Securing digital environments with <span className="text-green-400">ethical hacking</span> and <span className="text-yellow-400">penetration testing.</span>
+      </p>
+      <a href="/resume.pdf" className="mt-8 px-8 py-3 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition hover-scale relative">
+        Download Resume
+      </a>
+    </section>
+  );
+};
+
+export default Hero;
