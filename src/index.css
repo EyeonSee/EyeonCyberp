@@ -2,16 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styles */
+/* Global Styling */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: white;
+  background-color: #0a0f1a; /* Deep dark blue background */
+  color: #ffffff; /* White text */
+  font-family: 'Inter', sans-serif;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+/* Headings */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Highlight Effect */
+.text-highlight {
+  color: #38bdf8; /* Neon blue accent */
+}
+
+/* Smooth Hover Effects */
+button, a {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Glowing Effect */
+.glow {
+  text-shadow: 0px 0px 10px rgba(56, 189, 248, 0.8);
 }
