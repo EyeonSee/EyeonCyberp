@@ -27,3 +27,27 @@ body {
 .hover-scale:hover {
   transform: scale(1.05);
 }
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: #38bdf8;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .nav-link {
+    display: block;
+    padding: 12px;
+  }
+}
