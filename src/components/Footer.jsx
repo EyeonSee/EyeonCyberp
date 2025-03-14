@@ -6,7 +6,7 @@ const Footer = () => {
         <a href="https://linkedin.com/in/ian-seetaram" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
           LinkedIn
         </a>
-        <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
+        <a href="https://github.com/EyeonSee" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
           GitHub
         </a>
         <a href="mailto:ian.seetaram@pm.me" className="hover:text-red-400 transition">
