@@ -2,29 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styling */
+/* 🌙 Dark Mode Background */
 body {
-  background-color: #0a0f1a; /* Deep dark blue background */
-  color: #ffffff; /* White text */
-  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0a0f1a, #1a1f2e);
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Headings */
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-/* Highlight Effect */
-.text-highlight {
-  color: #38bdf8; /* Neon blue accent */
-}
-
-/* Smooth Hover Effects */
-button, a {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Glowing Effect */
-.glow {
+/* 🌟 Glowing Text Effect */
+.text-glow {
   text-shadow: 0px 0px 10px rgba(56, 189, 248, 0.8);
+}
+
+/* 🎭 Glassmorphism Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+/* 🌊 Smooth Hover Animations */
+.hover-scale {
+  transition: transform 0.3s ease-in-out;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
 }
