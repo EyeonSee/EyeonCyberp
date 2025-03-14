@@ -4,9 +4,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#0a0f1a] text-white p-4 fixed w-full top-0 z-50 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-400">Ian Seetaram</h1>
+    <nav className="bg-black/30 backdrop-blur-lg fixed w-full top-0 z-50 shadow-lg">
+      <div className="container mx-auto flex justify-between items-center p-6">
+        <h1 className="text-3xl font-bold text-blue-400">Ian Seetaram</h1>
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-2xl">
           ☰
         </button>
