@@ -14,7 +14,7 @@ body {
 
 /* ✅ Fix Hero Section Being Under Navbar */
 #hero {
-  padding-top: 100px; /* Adjust this value based on navbar height */
+  padding-top: 200px; /* Adjust this value based on navbar height */
 }
 
 /* 🎭 Glassmorphism Effect */
