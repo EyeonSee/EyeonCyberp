@@ -10,7 +10,11 @@ body {
   color: white;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  padding-top: 80px; /* ✅ Fixes navbar overlap */
+}
+
+/* ✅ Fix Hero Section Being Under Navbar */
+#hero {
+  padding-top: 100px; /* Adjust this value based on navbar height */
 }
 
 /* 🎭 Glassmorphism Effect */
@@ -121,13 +125,4 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 20px;
-}
-
-.footer-links a {
-  color: white;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-links a:hover {
-  color: #38bdf8;
 }
