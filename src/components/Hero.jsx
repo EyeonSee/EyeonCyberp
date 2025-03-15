@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative">
+    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative pt-16">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-gray-900 opacity-40"></div>
 
       <motion.h1
