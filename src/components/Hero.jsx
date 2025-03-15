@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative pt-16">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-gray-900 opacity-40"></div>
-
+    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative pt-16 bg-gradient-to-br from-blue-900 via-black to-gray-900">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -26,6 +24,7 @@ const Hero = () => {
 
       <motion.a
         href="/resume.pdf"
+        download
         className="mt-6 px-8 py-3 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-transform transform hover:scale-105 relative"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
