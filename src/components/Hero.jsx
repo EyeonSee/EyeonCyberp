@@ -1,12 +1,38 @@
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
-    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative px-6">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-gray-900 opacity-30"></div>
+    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-gray-900 opacity-40"></div>
 
-      <h1 className="text-5xl md:text-6xl font-extrabold text-blue-400 relative">Cybersecurity & IT Expert</h1>
-      <p className="text-lg mt-6 max-w-2xl text-gray-300 relative">
-        Securing digital environments with <span className="text-green-400">ethical hacking</span> and <span className="text-yellow-400">penetration testing.</span>
-      </p>
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-6xl font-extrabold text-blue-400 relative"
+      >
+        Cybersecurity & IT Expert
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="text-lg mt-4 max-w-2xl text-gray-300 relative"
+      >
+        Protecting digital landscapes with <span className="text-green-400">ethical hacking</span> and{" "}
+        <span className="text-yellow-400">penetration testing.</span>
+      </motion.p>
+
+      <motion.a
+        href="/resume.pdf"
+        className="mt-6 px-8 py-3 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition-transform transform hover:scale-105 relative"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        Download Resume
+      </motion.a>
     </section>
   );
 };
