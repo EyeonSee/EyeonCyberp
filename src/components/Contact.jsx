@@ -1,17 +1,33 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";  // ✅ Ensure correct import
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        e.target,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          alert("Message Sent Successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <section id="contact" className="min-h-screen px-10 py-16 bg-[#0D1117] text-white">
-      <h2 className="text-4xl font-extrabold text-blue-400 mb-10 text-center">Contact Me</h2>
-      <form className="max-w-lg mx-auto glassmorphism p-6 rounded-lg shadow-lg space-y-4">
-        <input type="text" placeholder="Your Name" className="w-full p-3 bg-gray-900 border border-gray-700 rounded" required />
-        <input type="email" placeholder="Your Email" className="w-full p-3 bg-gray-900 border border-gray-700 rounded" required />
-        <textarea placeholder="Your Message" className="w-full p-3 bg-gray-900 border border-gray-700 rounded h-32" required />
-        <button type="submit" className="w-full bg-blue-500 p-3 rounded-lg text-white hover:bg-blue-600 transition">
-          Send Message
-        </button>
+    <section id="contact" className="min-h-screen p-10">
+      <h2 className="text-4xl font-bold text-blue-400">Contact</h2>
+      <form onSubmit={sendEmail} className="max-w-lg mx-auto">
+        <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 mb-3 border rounded" />
+        <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 mb-3 border rounded" />
+        <textarea name="message" placeholder="Your Message" required className="w-full p-3 h-32 border rounded"></textarea>
+        <button type="submit" className="w-full bg-blue-500 text-white p-3 rounded mt-3">Send</button>
       </form>
     </section>
   );
