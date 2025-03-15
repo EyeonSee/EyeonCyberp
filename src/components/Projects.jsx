@@ -16,11 +16,11 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="min-h-screen p-10 bg-[#0a0f1a] text-white">
-      <h2 className="text-4xl font-bold text-highlight mb-6 text-center">Projects</h2>
+      <h2 className="text-4xl font-bold text-blue-400 mb-6 text-center">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="bg-[#121826] p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition">
-            <h3 className="text-xl font-semibold text-highlight">{project.title}</h3>
+            <h3 className="text-xl font-semibold text-blue-400">{project.title}</h3>
             <p className="text-gray-300">{project.description}</p>
           </div>
         ))}
