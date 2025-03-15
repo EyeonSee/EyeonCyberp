@@ -10,7 +10,11 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     <div className="bg-[#0D1117] text-white">
-      <Navbar /> {/* Render Navbar only once */}
+      <Navbar /> {/* Navbar rendered at the top */}
+      
+      {/* Blank section to push Hero down */}
+      <div className="h-16"></div> {/* Height matches Navbar height (4rem) */}
+
       <Hero />
       <Resume />
       <Skills />
