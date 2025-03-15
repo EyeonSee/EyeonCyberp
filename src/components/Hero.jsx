@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative pt-16 bg-gradient-to-br from-blue-900 via-black to-gray-900">
-      {/* Navbar height is 4rem (16 * 4 = 64px), so pt-16 is added */}
+    <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative bg-gradient-to-br from-blue-900 via-black to-gray-900">
+      {/* No padding-top needed here */}
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
