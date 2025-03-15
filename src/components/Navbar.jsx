@@ -29,38 +29,9 @@ const Navbar = () => {
             <Link to="contact" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors">Contact</Link>
           </li>
         </ul>
-
-        {/* Mobile Menu Button (Visible on Mobile) */}
-        <button
-          className="md:hidden text-2xl transition-transform transform active:scale-90"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
       </div>
 
-      {/* Mobile Nav Links (Visible When Menu is Open) */}
-      <div
-        className={`fixed top-16 right-0 w-full bg-black/80 backdrop-blur-lg transition-transform duration-300 ease-in-out transform ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}
-      >
-        <ul className="flex flex-col items-center space-y-4 py-4">
-          <li>
-            <Link to="home" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
-          </li>
-          <li>
-            <Link to="resume" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Resume</Link>
-          </li>
-          <li>
-            <Link to="skills" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Skills</Link>
-          </li>
-          <li>
-            <Link to="projects" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Projects</Link>
-          </li>
-          <li>
-            <Link to="contact" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
-          </li>
-        </ul>
-      </div>
+
     </nav>
   );
 };
