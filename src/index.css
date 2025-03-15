@@ -10,6 +10,7 @@ body {
   color: white;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  padding-top: 80px; /* ✅ Fixes navbar overlap */
 }
 
 /* 🎭 Glassmorphism Effect */
@@ -58,18 +59,45 @@ nav ul {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* 🖥 Responsive Adjustments */
-@media (max-width: 768px) {
-  .nav-link {
-    font-size: 1rem;
-    padding: 8px 10px;
-  }
+/* ✅ Prevent Navbar Overlap */
+section {
+  padding-top: 80px;
+}
 
-  /* ✅ Ensure Navbar Items Stay in One Line */
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+/* ✅ Mobile Menu Animation */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 64%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ✅ Close Button in Mobile Menu */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* 📜 Smooth Scrolling */
