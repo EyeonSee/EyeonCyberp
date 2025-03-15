@@ -12,49 +12,59 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold text-blue-400 tracking-wide">Ian Seetaram</h1>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-xl" onClick={() => setIsOpen(!isOpen)}>
+        <button 
+          className="md:hidden text-2xl transition-transform transform active:scale-90" 
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex space-x-8">
           <li>
-            <Link to="home" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors">Home</Link>
+            <Link to="home" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors">Home</Link>
           </li>
           <li>
-            <Link to="resume" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors">Resume</Link>
+            <Link to="resume" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors">Resume</Link>
           </li>
           <li>
-            <Link to="skills" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors">Skills</Link>
+            <Link to="skills" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors">Skills</Link>
           </li>
           <li>
-            <Link to="projects" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors">Projects</Link>
+            <Link to="projects" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors">Projects</Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors">Contact</Link>
+            <Link to="contact" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors">Contact</Link>
           </li>
         </ul>
 
-        {/* Mobile Nav Links */}
-        {isOpen && (
-          <ul className="md:hidden absolute top-16 right-0 bg-black/30 backdrop-blur-lg w-full text-center py-4">
-            <li className="py-2">
-              <Link to="home" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
+        {/* Mobile Nav Links (Slide-in Animation) */}
+        <div className={`fixed top-0 right-0 w-64 h-full bg-black/80 backdrop-blur-lg transition-transform duration-300 ease-in-out transform ${isOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
+          <button 
+            className="absolute top-5 right-5 text-3xl text-white"
+            onClick={() => setIsOpen(false)}
+          >
+            <FaTimes />
+          </button>
+
+          <ul className="flex flex-col items-center justify-center h-full space-y-6">
+            <li>
+              <Link to="home" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
             </li>
-            <li className="py-2">
-              <Link to="resume" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Resume</Link>
+            <li>
+              <Link to="resume" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Resume</Link>
             </li>
-            <li className="py-2">
-              <Link to="skills" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Skills</Link>
+            <li>
+              <Link to="skills" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Skills</Link>
             </li>
-            <li className="py-2">
-              <Link to="projects" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Projects</Link>
+            <li>
+              <Link to="projects" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Projects</Link>
             </li>
-            <li className="py-2">
-              <Link to="contact" smooth={true} duration={500} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+            <li>
+              <Link to="contact" smooth={true} duration={500} offset={-80} className="nav-link hover:text-blue-400 transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
             </li>
           </ul>
-        )}
+        </div>
       </div>
     </nav>
   );
