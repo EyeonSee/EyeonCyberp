@@ -8,7 +8,7 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold text-blue-400 tracking-wide">Ian Seetaram</h1>
 
         {/* 🌟 Horizontal Navbar Links */}
-        <ul className="flex space-x-8">  {/* ✅ Flex applied here for horizontal layout */}
+        <ul className="flex flex-row space-x-8">  {/* ✅ Explicit flex-row for horizontal layout */}
           <li>
             <Link to="home" smooth={true} duration={500} className="nav-link">Home</Link>
           </li>
