@@ -37,7 +37,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Make Navbar Responsive */
+/* ✅ Ensure Navbar Stays Horizontal on Small Screens */
 @media (max-width: 768px) {
   .nav-link {
     font-size: 1rem;
