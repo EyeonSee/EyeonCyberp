@@ -13,7 +13,7 @@ const Skills = () => {
       <h2 className="text-4xl font-extrabold text-blue-400 text-center">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
         {skills.map((skill, index) => (
-          <div key={index} className="glassmorphism p-6 rounded-lg shadow-lg flex items-center space-x-4 hover-scale">
+          <div key={index} className="bg-[#121826] p-6 rounded-lg shadow-lg flex items-center space-x-4 hover:shadow-xl hover:scale-105 transition-transform">
             <span className="text-4xl">{skill.icon}</span>
             <h3 className="text-xl font-semibold">{skill.name}</h3>
           </div>
