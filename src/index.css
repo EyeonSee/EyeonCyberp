@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 🌙 Dark Mode Background */
+/* 🌙 Global Dark Mode Styling */
 body {
   background: linear-gradient(135deg, #0D1117, #161B22);
   color: white;
@@ -21,6 +21,26 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* 🎨 Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  padding: 16px 0;
+}
+
+/* ✅ Ensure Navbar Items are Always Horizontal */
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+/* 🌟 Navbar Links */
 .nav-link {
   font-size: 1.1rem;
   font-weight: 600;
@@ -30,6 +50,7 @@ body {
   transition: all 0.3s ease-in-out;
   padding: 10px 15px;
   border-radius: 8px;
+  display: block;
 }
 
 .nav-link:hover {
@@ -37,21 +58,18 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* ✅ Ensure Navbar Stays Horizontal on Small Screens */
+/* 🖥 Responsive Adjustments */
 @media (max-width: 768px) {
   .nav-link {
     font-size: 1rem;
     padding: 8px 10px;
   }
-}
 
-
-/* 💡 Smooth Hover Animations */
-.hover-scale {
-  transition: all 0.3s ease-in-out;
-}
-.hover-scale:hover {
-  transform: scale(1.05);
+  /* ✅ Ensure Navbar Items Stay in One Line */
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* 📜 Smooth Scrolling */
@@ -59,11 +77,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 💡 Section Headings */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* 📌 Footer Styling */
+footer {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
 .footer-links a {
   color: white;
   transition: color 0.3s ease-in-out;
 }
+
 .footer-links a:hover {
   color: #38bdf8;
 }
