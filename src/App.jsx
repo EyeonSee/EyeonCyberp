@@ -13,7 +13,7 @@ const App = () => {
       <Navbar /> {/* Navbar rendered at the top */}
       
       {/* Blank section to push Hero down */}
-      <div className="h-100"></div> {/* Height matches Navbar height (4rem) */}
+      <div className="h-16"></div> {/* Height matches Navbar height (4rem) */}
 
       <Hero />
       <Resume />
