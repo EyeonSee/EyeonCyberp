@@ -21,7 +21,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 🌟 Navbar Links */
 .nav-link {
   font-size: 1.1rem;
   font-weight: 600;
@@ -38,13 +37,14 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Mobile Navbar */
+/* Make Navbar Responsive */
 @media (max-width: 768px) {
   .nav-link {
-    display: block;
-    padding: 12px;
+    font-size: 1rem;
+    padding: 8px 10px;
   }
 }
+
 
 /* 💡 Smooth Hover Animations */
 .hover-scale {
